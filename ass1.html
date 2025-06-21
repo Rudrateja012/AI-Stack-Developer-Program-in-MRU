@@ -3,6 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <title>My Portfolio</title>
+    <style>
+      a{
+        border: #000;
+
+      }
+      b{
+        color: #000;
+      }
+      h1{
+        color: #000;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+        gap: 20px;
+      }
+
+      article {
+        flex: 3;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      aside {
+        flex: 1;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+        font-style: italic;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      h1, h2, h3 {
+        margin-top: 0;
+      }
+    </style>
   </head>
   <body>
 
@@ -17,19 +93,16 @@
       <article>
         <h2>Projects</h2>
         <ul>
-          <li>Project One - Hate text</li>
-          <a href="a">more info</a>
-          <li>Project Two - Smart health monitering</li>
-          <a href="a">more info</a>
-          <li>Project Three - health care</li>
-          <a href="a">more info</a>
+          <li>Project One - Hate text<br> <a href="a">more info</a></li>
+          <li>Project Two - Smart health monitoring<br> <a href="a">more info</a></li>
+          <li>Project Three - Health care <br><a href="a">more info</a></li>
         </ul>
-        
+
         <h2>Certificates</h2>
         <ul>
-          <li>Introduction to Copilots for Startups(simpli learn)</li>
-          <li>Public Speaking Course(EDUTA)</li>
-          <li>International Development(EDUTA)</li>
+          <li>Introduction to Copilots for Startups (SimpliLearn)</li>
+          <li>Public Speaking Course (EDUTA)</li>
+          <li>International Development (EDUTA)</li>
         </ul>
       </article>
 
@@ -40,7 +113,7 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 of government of india</p>
+      <p>&copy; 2025 Government of India</p>
     </footer>
 
   </body>
