@@ -1,72 +1,43 @@
-
-function Assignment1() {
-  var Name = prompt("Enter your name:");
-  console.log("Hello " + Name + "!");
-  alert("Hello " + Name + "!"+" Welcome to the JavaScript assignment.");
+class Student {
+    constructor(name, roll, marks) {
+        this.name = name;
+        this.roll = roll;
+        this.marks = marks;
+    }
+    
+    getGrade() {
+        if(this.marks >= 90) {
+            return "A+";
+        }
+        else if(this.marks >= 80) {
+            return "A";
+        }
+        else if(this.marks >= 70) {
+            return "B+";
+        }
+        else if(this.marks >= 60) {
+            return "B";
+        }
+        else if(this.marks >= 50) {
+            return "C";
+        }
+        else {
+            return "F";
+        }
+    }
 }
 
-function Assignment2() {
-  var num1 = Number(prompt("Enter first number:"));
-  var operation = prompt("Enter operation (+, -, *, /):");
-  var num2 = Number(prompt("Enter second number:"));
-  var result;
-  switch (operation) {
-    case "+":
-      result = num1 + num2;
-      break;
-    case "-":
-      result = num1 - num2;
-      break;
-    case "*":
-      result = num1 * num2;
-      break;
-    case "/":
-      if (num2 !== 0) {
-        result = num1 / num2;
-      } else {
-        alert("Cannot divide by zero.");
-        return;
-      }
-      break;
-    default:
-      alert("Invalid operation.");
-      return;
-  }
-  console.log(`The result of ${num1} ${operation} ${num2} is: ${result}`);
-  alert(`The result of ${num1} ${operation} ${num2} is: ${result}`);
-}
-function Assignment3() {
-  var length = Number(prompt("Enter the length of the rectangle:"));
-  var width = Number(prompt("Enter the width of the rectangle:"));
-  var area = length * width;
-  console.log(`The area of the rectangle is: ${area}`);
-  alert(`The area of the rectangle is: ${area}`);
-}
+const stu1 = new Student("Rudra", 358, 75);
+const stu2 = new Student("Rajeev", 320, 85);
+const stu3 = new Student("Dhana", 350, 60);
+console.log(stu1.name+" "+stu1.getGrade()+" Grade");
+console.log(stu2.name+" "+stu2.getGrade()+" Grade");
+console.log(stu3.name+" "+stu3.getGrade()+" Grade");
+console.log("Total Students: 3");
+console.log("Total Marks: " + (stu1.marks + stu2.marks + stu3.marks));
+console.log("Average Marks: " + ((stu1.marks + stu2.marks + stu3.marks) / 3).toFixed(2));
+console.log("Highest Marks: " + Math.max(stu1.marks, stu2.marks, stu3.marks));
+console.log("Lowest Marks: " + Math.min(stu1.marks, stu2.marks, stu3.marks));
 
-var date = new Date();
-var year = date.getFullYear();
-function Assignment4() {
-  var birthYear = Number(prompt("Enter your birth year:"));
-  if (birthYear > year) {
-    alert("Birth year cannot be in the future.");
-    return;
-  }
-  var age = year - birthYear;
-  console.log(`You are ${age} years old.`);
-  alert(`You are ${age} years old.`);
-}
 
-function Assignment5() {
-  var num1 = Math.floor(Math.random() * 10);
-  var num2 = Math.floor(Math.random() * 10);
-  var answer = num1 + num2;
-  var userAnswer = Number(prompt(`What is ${num1} + ${num2}?`));
 
-  if (userAnswer === answer) {
-    console.log("Correct!");
-    alert("Correct!");
-  } else {
-    console.log(`Incorrect! The correct answer is ${answer}.`);
-    alert(`Incorrect! The correct answer is ${answer}.`);
-  }
-}
